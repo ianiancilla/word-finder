@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Word Reference</title>
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+        <h1>Word Reference</h1>
+        <h3>Choose parameters that should apply to your search, then enter a word and click "Search".</h3>
+
+        <div class="input">
+            <input id="input-field" type="search" placeholder="type here">
+            <input id="search" type="button" value="Search">
+        </div>
+        <div class="parameters">
+            <ul>
+                <li><label class= "prova">Definition<input type="checkbox"></label></li>
+                <li><label>Synonims<input id="syn" type="checkbox"></label></li>
+                <li><label>Antonyms<input type="checkbox"></label></li>
+                <li><label>Similar meaning<input type="checkbox"></label></li>
+                <li><label>Popular modifiers<input type="checkbox"></label></li>
+                <li><label>Popularly modified by<input type="checkbox"></label></li>
+                <li><label>Triggers<input type="checkbox"></label></li>
+                <li><label>Find more specific<input type="checkbox"></label></li>
+                <li><label>Find more specific<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+                <li><label>TEXT<input type="checkbox"></label></li>
+            </ul>
+        </div>
+
+        <div class= "wiki">
+            <h4>Wikipedia link: </h4>
+            <p id="wiki-link"></p>
+        </div>
+
+        <div class="results">
+            <p id="result-box">PROVA</p>
+        </div>
+
+        <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+        <script src = "main.js" ></script>
+    </body>
+</html>
