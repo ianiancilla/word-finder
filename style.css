@@ -9,15 +9,15 @@ DB8E42
 156F59
  */
  
- * { margin:0; padding:0; box-sizing:border-box; }
-
+ * {
+     margin:0; padding:0; box-sizing:border-box;
+    }
 body{
     background-color: #F2EFE8;
     text-align: center;
     color: #156F59;
     font-family: 'Lato', sans-serif;
 }
-
 h1, h2, h3, h4 {
     font-family: 'Gloria Hallelujah', cursive; 
 }
@@ -28,11 +28,8 @@ h3 {
     font-size: 1rem;
     padding: 0.3rem;
 }
-::placeholder{
-    color: #8BB6A2;
-}
-/* HEADER SECTION */
 
+/* HEADER SECTION */
 .header {
     background-color: #DB8E42;
     padding: 0.5rem;
@@ -54,7 +51,7 @@ input[type="search"] {
     font-family: 'Gloria Hallelujah', cursive; 
     font-size: 1rem;
     text-align: center;
-   }
+}
 input[type="button"] {
     text-align: center;
     width: 5rem;
@@ -65,14 +62,27 @@ input[type="button"] {
     font-family: 'Gloria Hallelujah', cursive; 
     font-size: 1.5rem;
    }
-   
-   .line, ul {
+::placeholder{
+    color: #8BB6A2;
+}
+
+   /* PARAMETERS SELECTION */ 
+   .line {
        display: flex;
+       width: 100%;
+       justify-content: center;
    }
    input[type="radio"] {
     display: none;
    }
-   li{
+   label{
        background-color: #156F59;
-       color: #8BB6A2;
+       color: #F2EFE8;
+       width: 15%;
+       height: 3rem;
+       line-height: 2.2rem;
+       margin: 0.2rem;
+       padding: 0.5rem;
+       cursor: pointer;
+       text-transform: uppercase;
    }
