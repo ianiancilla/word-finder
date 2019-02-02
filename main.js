@@ -2,21 +2,24 @@
 
 //declare variables
 const inputField = document.querySelector("#input-field");
-const url = "https://api.datamuse.com/words?";
+const wikiField = document.querySelector("#wiki-link")
+
+const urlDatamuseAPI = "https://api.datamuse.com/words?";
+const urlWiki = "https://en.wikipedia.org/wiki/";
 
 //jQuery
 $(document).ready(()=>{
     $("#search").on("click", getSearch)
+    $("#search").on("click", setWikiLink)
 
 });
 
-//WIP functions
+//Core functions
 async function getSearch()  {//it sends a request to the API using the content of the input field
     const wordQuery = inputField.value;
-    console.log("getting the param")
     const paramQuery = getCurrentParam();
-    const endpoint = url + paramQuery + "=" + wordQuery;
-    console.log("sending fetch for" + endpoint)
+    const endpoint = urlDatamuseAPI + paramQuery + "=" + wordQuery;
+    console.log("Fetching: " + endpoint)
     try {
       const response = await fetch(endpoint);
       if (response.ok) {
@@ -27,6 +30,20 @@ async function getSearch()  {//it sends a request to the API using the content o
       console.log(error);
     }
   }
+
+//WIP
+function setWikiLink () {
+  let wikiLink = "";
+  if (inputField.value) {
+    wikiLink = urlWiki+inputField.value;
+    wikiField.href = wikiLink;
+  } else {
+    wikiLink = "Please add something in the Search field.";
+  }
+  console.log("Wikipedia link: " + wikiLink);
+  wikiField.innerHTML = wikiLink;
+  
+}
 
 //helper functions
   function renderResponse (respArray) { //used on the json() of a Datamuse response, will return a string composed of the list of words, separated by a comma, ending in a full-stop. If no results are present, it will return a message detailing this.
@@ -42,20 +59,7 @@ async function getSearch()  {//it sends a request to the API using the content o
   }
 
   function getCurrentParam () {
-    /*const radioButtons = document.querySelectorAll("radio")
-    console.log(radioButtons)
-    let currentParam = "";
-    console.log("getting param started")
-      radioButtons.forEach(button => {
-        if (button.checked) {
-          currentParam = button.value;
-          console.log("button checked is: ")
-          console.log(button.value)
-        }
-      })
-    return currentParam;*/
     var radioButtons = document.querySelectorAll('input[type="radio"]:checked');
     var currentParam = radioButtons.length>0? radioButtons[0].value: null;
-    console.log("param passed is "+currentParam)
     return currentParam;
   }
