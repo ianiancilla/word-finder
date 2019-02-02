@@ -3,45 +3,64 @@
     <head>
         <title>Word Reference</title>
         <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Lato" rel="stylesheet">
 
     </head>
     <body>
-        <h1>Word Reference</h1>
-        <h3>Choose a parameter, then enter a word and click "Search".</h3>
-
-        <div class="input">
-            <input id="input-field" type="search" placeholder="type here">
-            <input id="search" type="button" value="Search">
+        <div class="header">
+            <h1>Word Reference</h1>
+            <div class="input">
+                    <input id="input-field" type="search" placeholder="type here">
+                    <input id="search" type="button" value="GO">
+            </div>
+            <h3>Choose a parameter, then enter a word and click "GO"</h3>
+            
         </div>
+        
         <div class="parameters">
-            <ul>
+            
                 <!-- <li><label>Definition<input type="radio" name="param" value="md=d&sp"></label></li> -->
-                <li><label>Synonims<input id="syn" type="radio" name="param" value="rel_syn"></label></li>
-                <li><label>Antonyms<input type="radio" name="param" value="rel_ant"></label></li>
-                <li><label>Similar meaning<input type="radio" name="param" value="ml"></label></li>
-                <li><label>Similar sound<input type="radio" name="param" value="sl"></label></li>
-                <li><label>Popular modifiers<input type="radio" name="param" value="rel_jjb"></label></li>
-                <li><label>Popularly modified by<input type="radio" name="param" value="rel_jja"></label></li>
-                <li><label>Triggers<input type="radio" name="param" value="trg"></label></li>
-                <li><label>Hypernims<input type="radio" name="param" value="rel_spc"></label></li>
-                <li><label>Hyponims<input type="radio" name="param" value="rel_gen"></label></li>
-                <li><label>Holonyms<input type="radio" name="param" value="rel_com"></label></li>
-                <li><label>Meronyms<input type="radio" name="param" value="rel_par"></label></li>
-                <li><label>Rhymes<input type="radio" name="param" value="rel_rhy"></label></li>
-                <li><label>Consonant match<input type="radio" name="param" value="rel_cns"></label></li>
-                <li><label>Frequent followers<input type="radio" name="param" value="rel_bga"></label></li>
-                <li><label>Frequent predecessors<input type="radio" name="param" value="rel_bgb"></label></li>
+                <div class="line" id="meaning">
+                        <ul>
+                        <li><label>Synonims<input id="syn" type="radio" name="param" value="rel_syn"></label></li>
+                        <li><label>Antonyms<input type="radio" name="param" value="rel_ant"></label></li>
+                        <li><label>Similar meaning<input type="radio" name="param" value="ml"></label></li>
+                        <li><label>Triggers<input type="radio" name="param" value="trg"></label></li>
+                        </ul>
+                </div>
+
+                <div class="line" id="nims">
+                    <li><label>Hypernims<input type="radio" name="param" value="rel_spc"></label></li>
+                    <li><label>Hyponims<input type="radio" name="param" value="rel_gen"></label></li>
+                    <li><label>Holonyms<input type="radio" name="param" value="rel_com"></label></li>
+                    <li><label>Meronyms<input type="radio" name="param" value="rel_par"></label></li>
+                </div>
+
+                <div class="line" id="sound">
+                    <li><label>Consonant match<input type="radio" name="param" value="rel_cns"></label></li>
+                    <li><label>Rhymes<input type="radio" name="param" value="rel_rhy"></label></li>
+                    <li><label>Similar sound<input type="radio" name="param" value="sl"></label></li>   
+                </div>
+
+                <div class="line" id="context">
+                    <li><label>Frequent followers<input type="radio" name="param" value="rel_bga"></label></li>
+                    <li><label>Frequent predecessors<input type="radio" name="param" value="rel_bgb"></label></li>
+                    <li><label>Popular modifiers<input type="radio" name="param" value="rel_jjb"></label></li>
+                    <li><label>Popularly modified by<input type="radio" name="param" value="rel_jja"></label></li>
+                </div>
+
 
             </ul>
         </div>
 
         <div class= "wiki">
             <h4>Wikipedia link: </h4>
-            <a id="wiki-link"></a>
+            <a id="wiki-link" target="_blank"></a>
         </div>
 
         <div class="results">
-            <p id="result-box">PROVA</p>
+            <h4>Results: </h4>
+            <p id="result-box"></p>
         </div>
 
         <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
