@@ -11,11 +11,15 @@ const urlWiki = "https://en.wikipedia.org/wiki/";
 $(document).ready(()=>{
     $("#search").on("click", getSearch)
     $("#search").on("click", setWikiLink)
+    $(".label").on("click", (event) =>{
+      $(event.currentTarget).toggleClass("selected")
+    })
 
 });
 
 //Core functions
 async function getSearch()  {//it sends a request to the API using the content of the input field
+    $(".results").show("fast");
     const wordQuery = inputField.value;
     const paramQuery = getCurrentParam();
     const endpoint = urlDatamuseAPI + paramQuery + "=" + wordQuery;
@@ -55,6 +59,7 @@ function setWikiLink () {
     if (strResponse === ".") {//STILL NEEDS TO BE CHANGED TO STH A BIT MORE ELEGANT, SO THAT IT DOES NOT THE forEach ON AN EMPTY ANSWER.
       strResponse = "Sorry, there were no matching results."
     }
+    strResponse = "<br /><br />"+strResponse;
     return strResponse
   }
 
