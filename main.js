@@ -11,8 +11,11 @@ const urlWiki = "https://en.wikipedia.org/wiki/";
 $(document).ready(()=>{
     $("#search").on("click", getSearch)
     $("#search").on("click", setWikiLink)
-    $(".label").on("click", (event) =>{
-      $(event.currentTarget).toggleClass("selected")
+    $("label").on("click", () =>{
+      if (inputField.value !== "") {
+        getSearch();
+        setWikiLink();
+      }
     })
 
 });
