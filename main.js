@@ -47,12 +47,12 @@ $(document).ready(()=>{
     $("label").on("mouseout", (event) =>{
       var radioButtons = document.querySelectorAll('input[type="radio"]:checked');
       if (radioButtons.length>0) {
-        setFooterText(radioButtons[0].next().attr("id"))
+        setFooterText($('input[name=param]:checked', '.left').attr("id"))
       } else {
         $(".footer").hide();
       }
-    })
-
+    });
+   
 
     // var radioButtons = document.querySelectorAll('input[type="radio"]:checked');
     // var currentParam = radioButtons.length>0? radioButtons[0].value: null;

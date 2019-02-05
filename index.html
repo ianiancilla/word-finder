@@ -11,28 +11,28 @@
     <div class="bg"></div>
 
     <div class="main">
-        <div class="left">
-            <!-- <div class="parameters"> -->
-            <!-- <div class="column"> -->
-            <input id="syn" type="radio" name="param" value="rel_syn"><label for="syn">Synonims</label>
-            <input id="ant" type="radio" name="param" value="rel_ant"><label for="ant">Antonyms</label>
-            <input id="ml" type="radio" name="param" value="ml"><label for="ml">Similar meaning</label>
-            <input id="trg" type="radio" name="param" value="trg"><label for="trg">Triggers</label>
-            <input id="spc" type="radio" name="param" value="rel_spc"><label for="spc">Hypernyms</label>
-            <input id="gen" type="radio" name="param" value="rel_gen"><label for="gen">Hyponyms</label>
-            <input id="com" type="radio" name="param" value="rel_com"><label for="com">Holonyms</label>
-            <input id="par" type="radio" name="param" value="rel_par"><label for="par">Meronyms</label>
-            <input id="cns" type="radio" name="param" value="rel_cns"><label for="cns">Consonant match</label>
-            <input id="rhy" type="radio" name="param" value="rel_rhy"><label for="rhy">Rhymes</label>
-            <input id="nry" type="radio" name="param" value="rel_nry"><label for="nry">Approx. rhymes</label>
-            <input id="sl" type="radio" name="param" value="sl"><label for="sl">Similar sound</label>
-            <input id="bga" type="radio" name="param" value="rel_bga"><label for="bga">Freq. followers</label>
-            <input id="bgb" type="radio" name="param" value="rel_bgb"><label for="bgb">Freq. predecessors</label>
-            <input id="jjb" type="radio" name="param" value="rel_jjb"><label for="jjb">Freq. modifiers</label>
-            <input id="jja" type="radio" name="param" value="rel_jja"><label for="jja">Freq. modified</label>
-            <!-- </div> -->
-            <!-- </div> -->
-        </div>
+        <form class="left">
+            <!-- <form class="parameters"> -->
+                <!-- <div class="column"> -->
+                <input id="syn" type="radio" name="param" value="rel_syn"><label for="syn">Synonims</label>
+                <input id="ant" type="radio" name="param" value="rel_ant"><label for="ant">Antonyms</label>
+                <input id="ml" type="radio" name="param" value="ml"><label for="ml">Similar meaning</label>
+                <input id="trg" type="radio" name="param" value="trg"><label for="trg">Triggers</label>
+                <input id="spc" type="radio" name="param" value="rel_spc"><label for="spc">Hypernyms</label>
+                <input id="gen" type="radio" name="param" value="rel_gen"><label for="gen">Hyponyms</label>
+                <input id="com" type="radio" name="param" value="rel_com"><label for="com">Holonyms</label>
+                <input id="par" type="radio" name="param" value="rel_par"><label for="par">Meronyms</label>
+                <input id="cns" type="radio" name="param" value="rel_cns"><label for="cns">Consonant match</label>
+                <input id="rhy" type="radio" name="param" value="rel_rhy"><label for="rhy">Rhymes</label>
+                <input id="nry" type="radio" name="param" value="rel_nry"><label for="nry">Approx. rhymes</label>
+                <input id="sl" type="radio" name="param" value="sl"><label for="sl">Similar sound</label>
+                <input id="bga" type="radio" name="param" value="rel_bga"><label for="bga">Freq. followers</label>
+                <input id="bgb" type="radio" name="param" value="rel_bgb"><label for="bgb">Freq. predecessors</label>
+                <input id="jjb" type="radio" name="param" value="rel_jjb"><label for="jjb">Freq. modifiers</label>
+                <input id="jja" type="radio" name="param" value="rel_jja"><label for="jja">Freq. modified</label>
+                <!-- </div> -->
+            <!-- </form> -->
+        </form>
 
         <div class="right">
             <div class="header">
@@ -62,9 +62,10 @@
 
 
 
-
-    <script src="http://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
-        crossorigin="anonymous"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
     <script src="main.js"></script>
 </body>
 
